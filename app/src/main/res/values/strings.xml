@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">duanmau</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="cancel">Hủy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">Lưu</string>
+    <string name="quan_ly_phieu_muon">Quản lý phiếu mươn</string>
+    <string name="quan_ly_loai_sach">Quản lý loại sách</string>
+    <string name="quan_ly_sach">Quản lý sách</string>
+    <string name="quan_ly_thanh_vien">Quản lý thành viên</string>
+    <string name="top_10_sach">Top 10 sách được mượn nhiều nhất</string>
+    <string name="doanh_thu">Doanh Thu</string>
+    <string name="them_nguoi_dung">Thêm người dùng</string>
+    <string name="doi_mat_khau">Đổi mật khẩu</string>
+</resources>
