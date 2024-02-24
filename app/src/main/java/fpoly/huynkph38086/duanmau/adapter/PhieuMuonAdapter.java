@@ -73,7 +73,7 @@ public class PhieuMuonAdapter extends ArrayAdapter<PhieuMuon> {
 
         Date date = new Date(item.ngayMuon);
 
-        tvMaPM.setText("Mã phiếu: " + item.maTT);
+        tvMaPM.setText("Mã phiếu: " + item.maPM);
         tvTenTV.setText("Người mượn: " + tv.tenTV);
         tvTenSach.setText("Sách: " + sach.tenSach);
         tvTienThue.setText(item.tienThue + "VND");

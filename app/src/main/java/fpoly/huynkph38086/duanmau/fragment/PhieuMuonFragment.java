@@ -134,7 +134,7 @@ public class PhieuMuonFragment extends ListFragment {
         edMaPM.setEnabled(false);
 
         if (type == 1){
-            edMaPM.setText(item.maPM);
+            edMaPM.setText(String.valueOf(item.maPM));
             spTV.setSelection(TVp);
             spSach.setSelection(Sp);
             date = new Date(item.ngayMuon);
