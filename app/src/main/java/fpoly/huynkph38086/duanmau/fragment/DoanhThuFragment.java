@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 import fpoly.huynkph38086.duanmau.R;
@@ -24,6 +25,7 @@ public class DoanhThuFragment extends Fragment {
     EditText edBD, edKT;
     TextView tvDoanhThu;
     ThongKeDAO dao;
+    Date ngayBD, ngayKT;
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     int mY, mM, mD;
 
@@ -59,7 +61,8 @@ public class DoanhThuFragment extends Fragment {
         });
 
         btnDoanhThu.setOnClickListener(v -> {
-            String sBD = edBD.getText().toString(), sKT = edKT.getText().toString();
+            String sBD = String.valueOf(ngayBD.getTime()),
+                    sKT = String.valueOf(ngayKT.getTime());
             tvDoanhThu.setText("Tổng doanh thu: " + dao.getDoanhThu(sBD, sKT) + " VND.");
         });
 
@@ -71,13 +74,15 @@ public class DoanhThuFragment extends Fragment {
         mM = month;
         mD = day;
         GregorianCalendar c = new GregorianCalendar(mY, mM, mD);
-        edBD.setText(sdf.format(c.getTime()));
+        ngayBD = c.getTime();
+        edBD.setText(sdf.format(ngayBD));
     };
     DatePickerDialog.OnDateSetListener mDateKT = (view, year, month, day) -> {
         mY = year;
         mM = month;
         mD = day;
         GregorianCalendar c = new GregorianCalendar(mY, mM, mD);
-        edKT.setText(sdf.format(c.getTime()));
+        ngayKT = c.getTime();
+        edKT.setText(sdf.format(ngayKT));
     };
 }
