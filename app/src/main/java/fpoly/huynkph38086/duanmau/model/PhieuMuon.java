@@ -7,10 +7,7 @@ import java.sql.Date;
 public class PhieuMuon {
     public int maPM;
     public String maTT;
-    public int maTV;
-    public int maSach;
-    public int trangThai;
-    public int tienThue;
+    public int maTV, maSach, trangThai, tienThue;
     public long ngayMuon;
 
     public PhieuMuon(int maPM, String maTT, int maTV, int maSach, int trangThai, int tienThue, long ngayMuon) {

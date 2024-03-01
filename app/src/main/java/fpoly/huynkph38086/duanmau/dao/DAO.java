@@ -8,15 +8,13 @@ import fpoly.huynkph38086.duanmau.database.Database;
 
 public abstract class DAO {
     final Context context;
-    final Database helper;
     final SQLiteDatabase database;
     ContentValues values;
     String table, whereClause, saf, saf_w;
 
     public DAO(Context context, String table, String primaryKey) {
         this.context = context;
-        this.helper = new Database(context);
-        database = helper.getWritableDatabase();
+        database = (new Database(context)).getWritableDatabase();
         this.table = table;
         whereClause = primaryKey + "=?";
         saf = "Select * from " + table;
